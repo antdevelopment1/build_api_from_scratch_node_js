@@ -3,7 +3,7 @@
 // Dependencies
 var http = require("http");
 var url = require("url");
-// var StringDecoder = require('string_decoder').StringDecoder;
+var StringDecoder = require('string_decoder').StringDecoder;
 
 // The server should respond to all requests with a string.
 var server = http.createServer(function(req, res) {
@@ -25,7 +25,7 @@ var server = http.createServer(function(req, res) {
     var headers = req.headers;
 
     // Get the payload if any.
-    // var decoder = new StringDecoder('utf-8');
+    var decoder = new StringDecoder('utf-8');
 
     // Send the response.
     res.end("Hello world\n");
