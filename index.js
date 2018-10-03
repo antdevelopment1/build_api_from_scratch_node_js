@@ -30,6 +30,7 @@ var server = http.createServer(function(req, res) {
     req.on('data', function(data) {
         buffer += decoder.write(data);
     });
+    
     req.on('end', function() {
         buffer += decoder.end();
 
